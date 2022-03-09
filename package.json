@@ -4,20 +4,28 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts",
+    "dev": "ts-node-dev --inspect --transpile-only --trace-warnings --trace-warnings --ignore-watch node_modules --respawn src/server.ts ",
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli"
   },
   "dependencies": {
     "-": "^0.0.1",
+    "@types/aws-sdk": "^2.7.0",
     "@types/csv-parse": "^1.2.2",
+    "@types/jsonwebtoken": "^8.5.8",
+    "@types/mime": "^2.0.3",
     "@typescript-eslint/eslint-plugin": "^5.8.0",
     "@typescript-eslint/parser": "^5.8.0",
     "D": "^1.0.0",
+    "aws-sdk": "^2.1089.0",
+    "bcryptjs": "^2.4.3",
     "csv": "^6.0.5",
     "csv-parse": "^5.0.4",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.2",
     "express": "^4.17.2",
+    "express-async-errors": "^3.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "mime": "^3.0.0",
     "multer": "^1.4.4",
     "pg": "^8.7.1",
     "reflect-metadata": "^0.1.13",
@@ -27,6 +35,7 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
     "@types/express": "^4.17.13",
     "@types/multer": "^1.4.7",
     "@types/node": "^17.0.12",
