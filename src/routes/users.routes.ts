@@ -8,10 +8,9 @@ import { UpdateUserAvatarController } from '../modules/accounts/useCases/updateU
 
 const usersRouters = Router();
 
-const uploadAvatar = multer(uploadConfig);
+const uploadAvatar = multer(uploadConfig.upload('./tmp/avatar'));
 
 const createUserController = new CreateUserController();
-
 const updateUserAvatarController = new UpdateUserAvatarController();
 
 usersRouters.post('/', createUserController.handle);
