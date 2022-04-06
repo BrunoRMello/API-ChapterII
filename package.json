@@ -4,8 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --inspect --transpile-only --trace-warnings --trace-warnings --ignore-watch node_modules --respawn src/server.ts ",
-    "typeorm": "ts-node-dev ./node_modules/typeorm/cli"
+    "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --trace-warnings --trace-warnings --ignore-watch node_modules --respawn src/shared/infra/http/server.ts ",
+    "typeorm": "ts-node-dev tsconfig-paths/register ./node_modules/typeorm/cli",
+    "test": "jest"
   },
   "dependencies": {
     "-": "^0.0.1",
@@ -37,6 +38,7 @@
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
     "@types/express": "^4.17.13",
+    "@types/jest": "^27.4.1",
     "@types/multer": "^1.4.7",
     "@types/node": "^17.0.12",
     "@types/swagger-ui-express": "^4.1.3",
@@ -46,10 +48,13 @@
     "eslint-import-resolver-typescript": "^2.5.0",
     "eslint-plugin-import-helpers": "^1.2.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^27.5.1",
     "nodemon": "^2.0.15",
     "prettier": "^2.5.1",
+    "ts-jest": "^27.1.4",
     "ts-node": "^10.4.0",
     "ts-node-dev": "^1.1.8",
+    "tsconfig-paths": "^3.14.1",
     "typescript": "^4.5.4"
   }
 }

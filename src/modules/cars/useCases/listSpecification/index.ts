@@ -1,4 +1,5 @@
-import { SpecificationsRepository } from '../../repositories/implementations/SpecificationsRepository';
+import { SpecificationsRepository } from '@modules/cars/infra/typeorm/repositories/SpecificationsRepository';
+
 import { ListSpecificationController } from './ListSpecificationController';
 import { ListSpecificationUseCases } from './ListSpecificationUseCase';
 
