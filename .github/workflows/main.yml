@@ -21,7 +21,7 @@ jobs:
   deploy-dev:
     runs-on: ubuntu-latest
     environment:
-      name: dev
+      name: developer
       url: 'google.com'
     needs: build
     steps:
