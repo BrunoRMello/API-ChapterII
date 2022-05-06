@@ -27,3 +27,13 @@ jobs:
     steps:
       - name: Run a one-line script      
         run: echo Hello, world!
+        
+  deploy-prd:
+        runs-on: ubuntu-latest
+        environment:
+          name: dev
+          url: 'google.com'
+        needs: deploy-dev
+        steps:
+          - name: Run a one-line script      
+            run: echo Hello, world!
