@@ -36,6 +36,20 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           source: "., !node_modules*copia todo o projeto e ignora pasta node"
           target: "test"
-          
+
+      - name: Update API
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ sercret.SSH_Host *ip da instancia}}
+          username: ${{ secrets.SSH_USER *user do app}}  
+          port: ${{ secrets.SSH_PORT}}
+          key: ${{ secrets.SSH_KEY }}
+          source: "., !node_modules*copia todo o projeto e ignora pasta node"
+          target: |
+            cd ~/app/api-rentx
+            yarn
+            ./node_modules/.bin/typeorm migration:run
+            pm2 restart rentx_api
+
 
    
